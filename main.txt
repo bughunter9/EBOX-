@@ -1,0 +1,33 @@
+#include <iostream>
+#include<string>
+#include<stdio.h>
+#include "Purchase.cpp"
+using namespace std;
+float Purchase::totalAmt;
+int Purchase::totalCountOfItems;
+
+int main()
+{
+    Purchase p[10], p1;
+    int n;
+    string name;
+    int items, totalItems;
+    float amt, totalAmt;
+    cout<<"Enter the Number of customers :";
+    cin>>n;
+    for(int i=0; i<n; i++){
+        cout<<"\nEnter the Name of the customer :";
+        cin>>name;
+        //getline(cin,name);
+        p[i].setUserName(name);
+        cout<<"\nEnter the No of Items purchased :";
+        cin>>items;
+        p[i].setCountOfItems(items);
+        cout<<"\nEnter the purchase amount :";
+        cin>>amt;
+        p[i].setAmount(amt);
+        
+    }
+    p1.display(p, n);
+	//fill the code 
+}

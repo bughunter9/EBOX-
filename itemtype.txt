@@ -1,0 +1,32 @@
+
+#include <iostream>
+#include<stdio.h>
+#include<string>
+using namespace std;
+class ItemType
+{
+	private:
+string name;
+double deposit;
+double costPerDay;
+public:
+	//fill the code 
+void display()
+{
+cout<<"Itemtype details:";
+	//fill the code 
+    cout<<"\nName: "<<name;
+    cout<<"\n"<<"Deposit: "<<deposit;
+    cout<<"\n"<<"Cost Per Day: "<<costPerDay;
+}
+void setName(string iname){
+    name=iname;
+    }
+void setDeposit(double depo){
+    deposit=depo;
+}
+void setCostPerDay(double cos){
+    costPerDay=cos;
+}
+};
+

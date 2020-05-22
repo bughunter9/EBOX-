@@ -1,0 +1,85 @@
+
+#include <iostream>
+#include<stdio.h>
+#include<string>
+using namespace std;
+class Purchase
+{
+private:
+string userName;
+int countOfItems;  
+float amount;
+float static totalAmt;
+int static totalCountOfItems;
+
+public:
+
+string getUserName()
+{
+return userName;
+}
+void setUserName(string a)
+{
+this->userName=a;
+}
+
+
+int getCountOfItems()
+{
+return countOfItems;
+}
+void setCountOfItems(int b)
+{
+this->countOfItems=b;
+}
+
+
+
+float getAmount()
+{
+return amount;
+}
+void setAmount(float c)
+{
+this->amount=c;
+}
+
+float getTotalAmt()
+{
+return totalAmt;
+}
+void setTotalAmt(float d)
+{
+this->totalAmt=d;
+}
+
+
+
+
+int getTotalCountOfItems()
+{
+return totalCountOfItems;
+}
+void settotalCountOfItems(int e)
+{
+this->totalCountOfItems=e;
+}
+
+
+void display(Purchase obj[],int n){
+    int s=0, s1=0;
+    cout<<"\nPurchase Details :\n";
+    for(int i=0; i<n; i++){
+        cout<<"Customer "<<i+1<<" :"<<obj[i].userName;
+        cout<<"\nNo of Items purchased :"<<obj[i].countOfItems;
+        cout<<"\nPurchase amount :"<<obj[i].amount<<"\n";
+        s+=obj[i].amount;
+        s1+=obj[i].countOfItems;
+    }
+    cout<<"Total Amount Received :"<<s;
+    cout<<"\nTotal Number of Items sold :"<<s1;
+
+    }
+    
+    
+};

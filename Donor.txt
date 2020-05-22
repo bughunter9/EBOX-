@@ -1,0 +1,23 @@
+#include <iostream>
+#include<stdio.h>
+#include<string>
+using namespace std;
+class Donor
+{
+    public:
+    string name;
+    int age;
+    float height, weight;
+    string gender, bloodGroup;
+    
+    void display()
+    {    	 
+        cout<<"Name :"<<name;
+        cout<<"\nAge :"<<age;
+        cout<<"\nheight :"<<height;
+        cout<<"\nweight :"<<weight;
+        cout<<"\nGender :"<<gender;
+        cout<<"\nBlood Group :"<<bloodGroup<<"\n";
+        //Fill your code
+    }
+};

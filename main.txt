@@ -1,33 +1,44 @@
 #include <iostream>
 #include<string>
 #include<stdio.h>
-#include "Purchase.cpp"
+#include "Donor.cpp"
 using namespace std;
-float Purchase::totalAmt;
-int Purchase::totalCountOfItems;
-
 int main()
 {
-    Purchase p[10], p1;
     int n;
+    Donor d[10], d1;
     string name;
-    int items, totalItems;
-    float amt, totalAmt;
-    cout<<"Enter the Number of customers :";
+    int age;
+    float height, weight;
+    string gender, bloodGroup;
+    cout<<"Enter the number of donors: ";
     cin>>n;
     for(int i=0; i<n; i++){
-        cout<<"\nEnter the Name of the customer :";
+        cout<<"\nEnter the donor details "<<i+1;
+        cout<<"\nEnter the Name :";
         cin>>name;
-        //getline(cin,name);
-        p[i].setUserName(name);
-        cout<<"\nEnter the No of Items purchased :";
-        cin>>items;
-        p[i].setCountOfItems(items);
-        cout<<"\nEnter the purchase amount :";
-        cin>>amt;
-        p[i].setAmount(amt);
-        
+        d[i].setName(name);
+        cout<<"\nEnter the Age :";
+        cin>>age;
+        d[i].setAge(age);
+        cout<<"\nEnter the height :";
+        cin>>height;
+        d[i].setHeight(height);
+        cout<<"\nEnter the weight :";
+        cin>>weight;
+        d[i].setWeight(weight);
+        cout<<"\nEnter the Gender :";
+        cin>>gender;
+        d[i].setGender(gender);
+        cout<<"\nEnter the Blood Group :";
+        cin>>bloodGroup;
+        d[i].setBloodGroup(bloodGroup);
     }
-    p1.display(p, n);
 	//fill the code 
+
+    cout<<"\nEnter the Bloodgroup details to be known:"<<endl;
+   //fill the code
+   string b;
+   cin>>b;
+   d1.search(d, b, n);
 }

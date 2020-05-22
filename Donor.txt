@@ -4,20 +4,76 @@
 using namespace std;
 class Donor
 {
-    public:
-    string name;
-    int age;
-    float height, weight;
-    string gender, bloodGroup;
-    
-    void display()
-    {    	 
-        cout<<"Name :"<<name;
-        cout<<"\nAge :"<<age;
-        cout<<"\nheight :"<<height;
-        cout<<"\nweight :"<<weight;
-        cout<<"\nGender :"<<gender;
-        cout<<"\nBlood Group :"<<bloodGroup<<"\n";
-        //Fill your code
-    }
+private:
+ string name;
+ int age;
+ float height;
+ float weight;
+ string gender;
+ string bloodGroup;
+ public:
+ string getName()
+ {
+     //fill the code
+ }
+ void setName(string a)
+ {
+     name=a;
+ }
+ int getAge()
+ {
+     return age;
+     //fill the code
+ }
+ void setAge(int b)
+ {
+     age=b;
+ }
+ float getHeight()
+ {
+     return height;
+     //fill the code
+ }
+ void setHeight(float c)
+ {
+     height=c;
+ }
+ float getWeight()
+ {
+     return weight;
+     //fill the code
+ }
+ void setWeight(float d)
+ {
+     weight=d;
+ }
+ string getGender()
+ {
+     return gender;
+     //fill the code
+ }
+ void setGender(string e)
+ {
+     gender=e;
+ }
+ string getBloodGroup()
+ {
+     return bloodGroup;
+     //fill the code
+ }
+ void setBloodGroup(string f)
+ {
+     bloodGroup=f;
+ }
+void search(Donor donor[],string bloodGroup,int n){
+    //cout<<bloodGroup;
+    for(int i=0; i<n; i++){
+       if(donor[i].bloodGroup==bloodGroup){
+           
+           cout<<donor[i].name<<"\n";
+       }
+   }
+}
+// fill the code
+
 };
